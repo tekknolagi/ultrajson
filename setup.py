@@ -31,7 +31,7 @@ module1 = Extension(
         "./lib/ultrajsondec.c",
     ],
     include_dirs=["./python", "./lib", "./deps/double-conversion/double-conversion"],
-    extra_compile_args=["-D_GNU_SOURCE"],
+    extra_compile_args=["-D_GNU_SOURCE", "-DPy_LIMITED_API=0x03030000"],
     extra_link_args=["-lstdc++", "-lm"],
 )
 
